@@ -1,0 +1,24 @@
+# Submission Privacy Scanner - 白名单配置
+# 在此声明"不算隐私泄露"的内容，扫描时自动跳过
+
+whitelist:
+  # 精确匹配：这些字符串不会被报告
+  exact:
+    # - "sanqiuXi@gmail.com"
+    # - "https://github.com/sanqiuXi/public-repo"
+
+  # 模式匹配（正则）：匹配到的内容不会被报告
+  patterns:
+    # - ".*@myproject\\.org$"
+    # - "https://arxiv\\.org/.*"
+    # - ".*example\\.com.*"
+
+  # 整类跳过：取消注释即可跳过整个检测类别
+  # 可选值：contact, identity, web_trace, secrets, path_leak, placeholder
+  skip_categories:
+    # - placeholder
+
+  # 跳过指定文件（正则匹配文件路径）
+  skip_files:
+    # - "whitelist\\.yaml$"
+    # - ".*\\.test\\..*"
